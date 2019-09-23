@@ -1,8 +1,12 @@
 <?php
 $dbh = new PDO('mysql:host=db;dbname=Luke-Collection', 'root', 'password');
 
-
-
-$query->execute();
-
-$result = $query->fetchAll();
+function pullSetNames()
+{
+    $query = $db->prepare("SELECT `Name`,`Alignment`,`Force Power (%)`,`Lightsaber Power (%)`,`Blaster Power (%)` FROM `star_wars_characters`");
+   $query->setFetchMode(PDO::FETCH_ASSOC);
+   $query->execute();
+   $result = $query-> fetchall();
+   $sets = $result;
+   var_dump($sets);
+}
