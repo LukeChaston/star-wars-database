@@ -24,11 +24,18 @@ pullSetNames($dbh);
 ?>
 
 <html>
+
 <head>
 
 </head>
 
 <body>
+<h1>Star Wars Character Table</h1>
+<div>
+
+</div>
+
+<h1>Create your own Character!</h1>
 </body>
 
 </html>
