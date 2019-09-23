@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: Luke-Collection
-# Generation Time: 2019-09-23 12:30:21 +0000
+# Generation Time: 2019-09-23 13:26:28 +0000
 # ************************************************************
 
 
@@ -20,23 +20,23 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table star-wars-characters
+# Dump of table star_wars_characters
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `star-wars-characters`;
+DROP TABLE IF EXISTS `star_wars_characters`;
 
-CREATE TABLE `star-wars-characters` (
-  `Name` varchar(15) DEFAULT NULL,
-  `Alignment` varchar(8) DEFAULT NULL,
-  `Force Power (%)` int(11) DEFAULT NULL,
-  `Lightsaber Power (%)` int(11) DEFAULT NULL,
-  `Blaster Power (%)` int(11) DEFAULT NULL
+CREATE TABLE `star_wars_characters` (
+  `Name` varchar(30) DEFAULT NULL,
+  `Alignment` enum('Sith','Republic') DEFAULT NULL,
+  `Force Power (%)` int(11) NOT NULL,
+  `Lightsaber Power (%)` int(11) NOT NULL,
+  `Blaster Power (%)` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `star-wars-characters` WRITE;
-/*!40000 ALTER TABLE `star-wars-characters` DISABLE KEYS */;
+LOCK TABLES `star_wars_characters` WRITE;
+/*!40000 ALTER TABLE `star_wars_characters` DISABLE KEYS */;
 
-INSERT INTO `star-wars-characters` (`Name`, `Alignment`, `Force Power (%)`, `Lightsaber Power (%)`, `Blaster Power (%)`)
+INSERT INTO `star_wars_characters` (`Name`, `Alignment`, `Force Power (%)`, `Lightsaber Power (%)`, `Blaster Power (%)`)
 VALUES
 	('Palpatine','Sith',98,72,3),
 	('Vader','Sith',84,82,23),
@@ -44,7 +44,7 @@ VALUES
 	('Hans Solo','Republic',15,5,94),
 	('Obi Wan','Republic',90,85,58);
 
-/*!40000 ALTER TABLE `star-wars-characters` ENABLE KEYS */;
+/*!40000 ALTER TABLE `star_wars_characters` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
