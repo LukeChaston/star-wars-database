@@ -8,6 +8,7 @@ function cardContainer ($sets)
                    <h2>Force Power (%): ' . $set['Force Power (%)'] .' </h2>
                    <h2>Lightsaber Power (%): ' . $set['Lightsaber Power (%)'] .' </h2>
                    <h2>Blaster Power (%): ' . $set['Blaster Power (%)'] .' </h2>
+                   <img src="Images/' . $set['Image'] .'">
                    </div>';
     }
     return $result;
