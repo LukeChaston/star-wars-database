@@ -31,7 +31,8 @@ pullSetNames($dbh);
 
 <body>
 <h1>Star Wars Character Table</h1>
-<div>
+<div class="dataContainer">
+
 
 </div>
 
