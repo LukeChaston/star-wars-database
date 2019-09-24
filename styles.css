@@ -1,11 +1,34 @@
 .dataContainer {
-     background-color: darkblue;
-     float:center;
+     overflow: auto;
+}
+
+.cards {
+     overflow: auto;
+     width: 100%;
+}
+
+.sets {
+     overflow:auto;
+     height: 350px;
+     width: 33%;
+     float: left;
+     margin: 20px;
+     background-color: darkblue ;
+}
+
+
+
+.text {
+     width:200px;
+     margin-right: 0;
+     float:left;
 }
 
 img {
-     height: 300px;
-     width: 300px;
+     display: inline-block;
+     height: 150px;
+     width: 150px;
      background-color: darkblue ;
+     float:left;
 }
 
