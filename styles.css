@@ -1,3 +1,19 @@
 .cardContainer {
+     background-color: darkblue;
+}
 
+card1 {
+     background-image: url("Palpatine.jpg");
+}
+card2 {
+     background-image: url("Palpatine.jpg");
+}
+card3 {
+     background-image: url("Palpatine.jpg");
+}
+card4 {
+     background-image: url("Palpatine.jpg");
+}
+card5 {
+     background-image: url("Palpatine.jpg");
 }
