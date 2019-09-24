@@ -11,7 +11,7 @@ require_once ('functions.php');
  */
 function pullSetNames($dbh)
 {
-    $query = $dbh->prepare("SELECT `Name`,`Alignment`,`Force Power (%)`, `Lightsaber Power (%)`,`Blaster Power (%)` FROM `star_wars_characters`");
+    $query = $dbh->prepare("SELECT `Name`,`Alignment`,`Force Power (%)`, `Lightsaber Power (%)`,`Blaster Power (%)`, `Image` FROM `star_wars_characters`");
    $query->setFetchMode(PDO::FETCH_ASSOC);
    $query->execute();
    $result = $query-> fetchall();
@@ -33,7 +33,7 @@ $sets = pullSetNames($dbh);
 <h1>Star Wars Character Table</h1>
 <section class="dataContainer">
     <div class="card1">
-
+<?php echo cardContainer($sets);?>
     </div>
     <div class="card2">
 
@@ -47,8 +47,7 @@ $sets = pullSetNames($dbh);
     <div class="card5">
 
     </div>
-<?php echo cardContainer($sets);
-?>
+
 </section>
 
 <h1>Create your own Character!</h1>
