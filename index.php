@@ -1,6 +1,6 @@
 <?php
 $dbh = new PDO('mysql:host=db;dbname=Luke-Collection', 'root', 'password');
-
+require_once ('functions.php');
 
 /**
  * Function to collect data from the Database and output array.
@@ -16,10 +16,10 @@ function pullSetNames($dbh)
    $query->execute();
    $result = $query-> fetchall();
    $sets = $result;
-   var_dump($sets);
+   return $sets;
 }
 
-pullSetNames($dbh);
+$sets = pullSetNames($dbh);
 
 ?>
 
@@ -32,8 +32,8 @@ pullSetNames($dbh);
 <body>
 <h1>Star Wars Character Table</h1>
 <div class="dataContainer">
-
-
+<?php echo cardContainer($sets);
+?>
 </div>
 
 <h1>Create your own Character!</h1>
