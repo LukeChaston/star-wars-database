@@ -31,10 +31,25 @@ $sets = pullSetNames($dbh);
 
 <body>
 <h1>Star Wars Character Table</h1>
-<div class="dataContainer">
+<section class="dataContainer">
+    <div class="card1">
+
+    </div>
+    <div class="card2">
+
+    </div>
+    <div class="card3">
+
+    </div>
+    <div class="card4">
+
+    </div>
+    <div class="card5">
+
+    </div>
 <?php echo cardContainer($sets);
 ?>
-</div>
+</section>
 
 <h1>Create your own Character!</h1>
 </body>
