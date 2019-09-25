@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: Luke-Collection
-# Generation Time: 2019-09-25 15:36:31 +0000
+# Generation Time: 2019-09-25 15:43:19 +0000
 # ************************************************************
 
 
@@ -42,7 +42,7 @@ VALUES
 	('Palpatine','Sith',98,72,3,'Palpatine.jpg'),
 	('Vader','Sith',84,82,23,'Darth Vader.jpg'),
 	('Skywalker','Republic',81,79,65,'Luke Skywalker.jpg'),
-	('Hans Solo','Republic',15,5,94,'Hans Solo.jpg'),
+	('Han Solo','Republic',15,5,94,'Hans Solo.jpg'),
 	('Obi Wan','Republic',90,85,58,'Obi Wan Kinobi.jpg');
 
 /*!40000 ALTER TABLE `star_wars_characters` ENABLE KEYS */;
