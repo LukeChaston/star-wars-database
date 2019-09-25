@@ -8,20 +8,18 @@
 }
 
 .sets {
-     overflow:auto;
-     height: 360px;
      width: 30%;
      float: left;
      margin: 20px;
-     background-color: darkblue ;
+     background-color: darkblue;
+     height: 400px;
 }
-
-
 
 .text {
      width:200px;
      margin-right: 0;
      float:left;
+     color:white;
 }
 
 img {
