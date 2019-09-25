@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: Luke-Collection
-# Generation Time: 2019-09-25 10:06:14 +0000
+# Generation Time: 2019-09-25 15:26:00 +0000
 # ************************************************************
 
 
@@ -26,18 +26,18 @@
 DROP TABLE IF EXISTS `star_wars_characters`;
 
 CREATE TABLE `star_wars_characters` (
-  `Name` varchar(30) DEFAULT NULL,
-  `Alignment` enum('Sith','Republic') DEFAULT NULL,
-  `Force Power (%)` int(11) NOT NULL,
-  `Lightsaber Power (%)` int(11) NOT NULL,
-  `Blaster Power (%)` int(11) NOT NULL,
-  `Image` varchar(255) DEFAULT NULL
+  `name` varchar(30) DEFAULT NULL,
+  `alignment` enum('Sith','Republic') DEFAULT NULL,
+  `forcePower(%)` int(11) NOT NULL,
+  `lightsaberPower(%)` int(11) NOT NULL,
+  `blasterPower(%)` int(11) NOT NULL,
+  `image` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `star_wars_characters` WRITE;
 /*!40000 ALTER TABLE `star_wars_characters` DISABLE KEYS */;
 
-INSERT INTO `star_wars_characters` (`Name`, `Alignment`, `Force Power (%)`, `Lightsaber Power (%)`, `Blaster Power (%)`, `Image`)
+INSERT INTO `star_wars_characters` (`name`, `alignment`, `forcePower(%)`, `lightsaberPower(%)`, `blasterPower(%)`, `image`)
 VALUES
 	('Palpatine','Sith',98,72,3,'Palpatine.jpg'),
 	('Vader','Sith',84,82,23,'Darth Vader.jpg'),
