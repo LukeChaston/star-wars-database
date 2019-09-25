@@ -1,4 +1,8 @@
 <?php
+/**
+ * Function to  output data in different card formats.
+ *
+ */
 function cardContainer ($sets)
 {
     $result = '';
