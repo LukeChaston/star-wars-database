@@ -1,14 +1,37 @@
 <?php
-$dbh = new PDO('mysql:host=db;dbname=Luke-Collection', 'root', 'password');
+require_once ('functions.php');
+$dbh = connectDB();
+$sets = pullSetNames($dbh);
+$result = cardContainer($sets);
 
-function pullSetNames($dbh)
-{
-    $query = $dbh->prepare("SELECT `Name`,`Alignment`,`Force Power (%)`, `Lightsaber Power (%)`,`Blaster Power (%)` FROM `star_wars_characters`");
-   $query->setFetchMode(PDO::FETCH_ASSOC);
-   $query->execute();
-   $result = $query-> fetchall();
-   $sets = $result;
-   var_dump($sets);
-}
+ ?>
 
-pullSetNames($dbh);
+
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="normalize.css"/>
+    <h1>Star Wars Character Table</h1>
+</head>
+
+<body>
+
+
+<section class="dataContainer">
+    <div class="cards">
+        <?php echo $result; ?>
+    </div>
+
+
+</section>
+
+</body>
+
+</html>
+
+
+
+

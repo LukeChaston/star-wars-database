@@ -1,0 +1,44 @@
+.dataContainer {
+     overflow: auto;
+}
+
+.cards {
+     overflow: auto;
+     width: 100%;
+}
+
+.sets {
+     width: 30%;
+     float: left;
+     margin: 20px;
+     background-color: darkblue;
+     height: 400px;
+}
+
+.text {
+     width:200px;
+     margin-right: 0;
+     float:left;
+     color:white;
+}
+
+img {
+     display: inline-block;
+     height: 200px;
+     width: 200px;
+     background-color: darkblue ;
+     float:left;
+}
+
+.boxes {
+     overflow:auto;
+
+}
+
+
+form {
+     float:center;
+     width:25%;
+}
+
+
