@@ -25,8 +25,8 @@ function pullSetNames( array $dbh) :array;
     /**
      * Function to  output data in different card formats.
      *
-     * @param $dbh star wars characters data.
-     * 
+     * @param $sets star wars characters data.
+     *
      */
     function cardContainer(array $sets) :array;
     {
