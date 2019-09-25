@@ -11,7 +11,7 @@ function connectDB () :PDO {
  *
  *
  */
-function pullSetNames($dbh)
+function pullSetNames( array $dbh) :array;
 {
     $query = $dbh->prepare("SELECT `name`,`alignment`,`forcePower(%)`, `lightsaberPower(%)`,`blasterPower(%)`, `image` FROM `star_wars_characters`");
     $query->setFetchMode(PDO::FETCH_ASSOC);
@@ -25,8 +25,10 @@ function pullSetNames($dbh)
     /**
      * Function to  output data in different card formats.
      *
+     * @param $dbh star wars characters data.
+     * 
      */
-    function cardContainer($sets)
+    function cardContainer(array $sets) :array;
     {
         $result = '';
         foreach ($sets as $set) {
