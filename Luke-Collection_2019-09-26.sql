@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: Luke-Collection
-# Generation Time: 2019-09-26 15:09:37 +0000
+# Generation Time: 2019-09-26 15:22:06 +0000
 # ************************************************************
 
 
@@ -26,30 +26,26 @@
 DROP TABLE IF EXISTS `star_wars_characters`;
 
 CREATE TABLE `star_wars_characters` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(20) DEFAULT NULL,
   `alignment` enum('Sith','Republic') DEFAULT NULL,
   `forcePower(%)` int(11) NOT NULL,
   `lightsaberPower(%)` int(11) NOT NULL,
   `blasterPower(%)` int(11) NOT NULL,
-  `image` varchar(255) DEFAULT NULL
+  `image` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `star_wars_characters` WRITE;
 /*!40000 ALTER TABLE `star_wars_characters` DISABLE KEYS */;
 
-INSERT INTO `star_wars_characters` (`name`, `alignment`, `forcePower(%)`, `lightsaberPower(%)`, `blasterPower(%)`, `image`)
+INSERT INTO `star_wars_characters` (`id`, `name`, `alignment`, `forcePower(%)`, `lightsaberPower(%)`, `blasterPower(%)`, `image`)
 VALUES
-	('Palpatine','Sith',98,72,3,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.11.18.png'),
-	('Vader','Sith',84,82,23,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.08.01.png'),
-	('Skywalker','Republic',81,79,65,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.09.28.png'),
-	('Han Solo','Republic',15,5,94,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.08.45.png'),
-	('Obi Wan','Republic',90,85,58,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.09.47.png'),
-	('Greedo','Sith',77,30,99,'test.jpg'),
-	('Veronica Whitley','Sith',10,56,9,'fgfg.jpg'),
-	('Meredith Brock','Sith',46,11,58,'Consectetur veniam '),
-	('Blaze Hendricks','Republic',31,80,37,'sfadsafdsaf.jpg'),
-	('Polo','Republic',65,54,75,'sfadsafdsaf.jpg'),
-	('Elliott Davenport','Sith',4,20,80,'Voluptate adipisci d');
+	(1,'Palpatine','Sith',98,72,3,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.11.18.png'),
+	(2,'Vader','Sith',84,82,23,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.08.01.png'),
+	(3,'Skywalker','Republic',81,79,65,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.09.28.png'),
+	(4,'Han Solo','Republic',15,5,94,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.08.45.png'),
+	(5,'Obi Wan','Republic',90,85,58,'https://d3atsf3fgek2rw.cloudfront.net/content/uploads/2015/09/Screen-Shot-2015-09-11-at-18.09.47.png');
 
 /*!40000 ALTER TABLE `star_wars_characters` ENABLE KEYS */;
 UNLOCK TABLES;
