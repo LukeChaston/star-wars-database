@@ -30,15 +30,14 @@ img {
      float:left;
 }
 
-.boxes {
-     overflow:auto;
-
-}
-
-
-form {
-     float:center;
+p {
      width:25%;
 }
+
+.boxes {
+     width:25%;
+}
+
+
 
 
