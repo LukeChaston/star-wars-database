@@ -1,15 +1,5 @@
-
-<html>
-
-<body>
-Character created. Press here to go back..
-<div class="buttonContainer">
-    <a href="index.php"><button type="button">GO BACK TO FORM</button></a>
-</div>
-</body>
-</html>
-
 <?php
+
 
 require_once 'functions.php';
 
@@ -22,7 +12,25 @@ $image= $_POST['image'];
 $connectDB = connectDB();
 $x = addDataToDb($connectDB, $name,$alignment, $forcePower,$lightsaberPower,$blasterPower, $image);
 
-var_dump($x);
+
+
+if ($x == false) {
+    header('Location: error.php');
+}
+?>
+
+
+<html>
+
+<body>
+Character created. Press here to go back..
+<div class="buttonContainer">
+    <a href="index.php"><button type="button">GO BACK TO FORM</button></a>
+</div>
+</body>
+</html>
+
+
 
 
 
