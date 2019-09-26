@@ -8,9 +8,6 @@ $result = cardContainer($sets);
 
  ?>
 
-
-
-
 <html>
 
 <head>
@@ -32,13 +29,13 @@ $result = cardContainer($sets);
 
 <div class="boxes">
 
-    <form action="index.php"  method="get">
-        <p>Name:</p> <input type="text" name="name"><br>
-        <p>Alignment: </p><input type="text" name="alignment"><br>
-        <p>Lightsaber Power (%):</p> <input type="text" name="lightsaberPower"><br>
-        <p>Force Power (%): </p> <input type="text" name="forcePower"><br>
-        <p> Blaster Power (%):</p> <input type="text" name="blasterPower"><br>
-        <p> Upload Avatar Image:</p> <input type="text" name="uploadAvatar"><br>
+    <form action="upload.php"  method=post>
+        <p>Name:</p> <input type="text" max="13" name="name"><br>
+        <p>Alignment: </p><select name="alignment"><option value="Republic">Republic</option> <option value="Sith">Sith</option><br></select>
+        <p>Lightsaber Power (%):</p> <input type="number" min="1" max="100" name="lightsaberPower"><br>
+        <p>Force Power (%): </p> <input type="number" min="1" max="100"  name="forcePower"><br>
+        <p> Blaster Power (%):</p> <input type="number" min="1" max="100"  name="blasterPower"><br>
+        <p> Upload Avatar Image:</p> <input type="text" name="image"><br>
         <input type="submit" value="Submit">
     </form>
 
