@@ -1,5 +1,7 @@
 <?php
-
+if (!isset($_GET ['auth'])) {
+    header("Location:index.php");
+}
 
 require_once 'functions.php';
 
@@ -10,11 +12,11 @@ $lightsaberPower=$_POST['lightsaberPower'];
 $blasterPower=$_POST['blasterPower'];
 $image= $_POST['image'];
 $connectDB = connectDB();
-$x = addDataToDb($connectDB, $name,$alignment, $forcePower,$lightsaberPower,$blasterPower, $image);
+$dataSuccess = addDataToDb($connectDB, $name,$alignment, $forcePower,$lightsaberPower,$blasterPower, $image);
 
 
 
-if ($x == false) {
+if ($dataSuccess == false) {
     header('Location: error.php');
 }
 ?>
