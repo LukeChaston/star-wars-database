@@ -24,7 +24,8 @@ function pullSetNames (PDO $dbh) : array {
     /**
      * Function to  output data in different card formats.
      *
-     * @param $sets star wars characters data.
+     * @param $sets star wars characters data. Data is : Name, alignment, force power, lightsaber power, blaster power
+     * and an image.
      *
      */
     function cardContainer(array $sets) : string {
