@@ -52,12 +52,7 @@ function addDataToDb(PDO $connectDB, $name, $alignment, $forcePower, $lightsaber
 {
     $query = $connectDB->prepare('INSERT INTO `star_wars_characters` (`name`, `alignment`, `forcePower(%)`, `lightsaberPower(%)`, `blasterPower(%)`, `image`)
     VALUES (:name, :alignment, :forcePower, :lightsaberPower, :blasterPower, :image);');
-//$name = $values['name'];
-//$alignment = $values['alignment'];
-//$forcePower = $values['forcePower(%)'];
-//$lightsaberPower = $values['lightsaberPower(%)'];
-//$blasterPower = $values ['blasterPower(%)'];
-//$image = $values['image'];
+
     $query->bindParam(':name', $name, PDO::PARAM_STR, 10);
     $query->bindParam(':alignment', $alignment, PDO::PARAM_STR, 8);
     $query->bindParam(':forcePower', $forcePower, PDO::PARAM_INT, 3);
@@ -66,3 +61,4 @@ function addDataToDb(PDO $connectDB, $name, $alignment, $forcePower, $lightsaber
     $query->bindParam(':image', $image, PDO::PARAM_STR, 255);
     return $query->execute();
 }
+
