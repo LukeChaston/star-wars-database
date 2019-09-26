@@ -30,29 +30,14 @@ $result = cardContainer($sets);
 
 <div class="boxes">
 
-    <form>
-        Alignment:<br>
-        <input type="text" name="alignment">
-    </form>
+    <form action="index.php"  method="get">
+        <p>Name:</p> <input type="text" name="name"><br>
+        <p>Alignment: </p><input type="text" name="alignment"><br>
+        <p>Lightsaber Power (%):</p> <input type="text" name="alignment"><br>
+        <p>Force Power (%): </p> <input type="text" name="alignment"><br>
+        <p> Blaster Power (%):</p> <input type="text" name="alignment"><br>
 
-    <form>
-        Force Power (%):<br>
-        <input type="text" name="forcePower">
-    </form>
-
-    <form>
-        Lightsaber Power (%):<br>
-        <input type="text" name="lightsaberPower">
-    </form>
-
-    <form>
-        Blaster Power (%):<br>
-        <input type="text" name="blasterPower">
-    </form>
-
-    <form>
-        Upload your own avatar:<br>
-        <input type="text" name="imageAvatar">
+    <input type="submit" value="Submit">
     </form>
 
 </div>
