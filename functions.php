@@ -35,7 +35,7 @@ function pullSetNames (PDO $dbh) : array {
                        <h2>Force Power (%): ' . $set['forcePower(%)'] . ' </h2>
                    <h2>Lightsaber Power (%): ' . $set['lightsaberPower(%)'] . ' </h2>
                    <h2>Blaster Power (%): ' . $set['blasterPower(%)'] . ' </h2></div>
-                  <div class="image"> <img src="' . 'Images/' . $set['image'] . '"/></div></div>';
+                  <div class="image"> <img src=" ' . $set['image'] . '"/></div></div>';
         }
         return $result;
     }
