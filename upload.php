@@ -1,15 +1,31 @@
+
+<html>
+
+<body>
+Character created. Press here to go back..
+<div class="buttonContainer">
+    <a href="index.php"><button type="button">GO BACK TO FORM</button></a>
+</div>
+</body>
+</html>
+
 <?php
 
 require_once 'functions.php';
 
-$connection = dbConn();
-$state = addDataToDb($_POST, $connection);
+$name=$_POST['name'];
+$alignment=$_POST['alignment'];
+$forcePower=$_POST['forcePower'];
+$lightsaberPower=$_POST['lightsaberPower'];
+$blasterPower=$_POST['blasterPower'];
+$image= $_POST['image'];
+$connectDB = connectDB();
+$x = addDataToDb($connectDB, $name,$alignment, $forcePower,$lightsaberPower,$blasterPower, $image);
 
-if ($state) {
-    header("Location: index.php");
-} else {
-    echo 'Incorrect input';
-    echo '<div class="buttonContainer">
-                <a href="formPage.php"><button type="button">GO BACK TO FORM</button></a>
-          </div>';
-}
+var_dump($x);
+
+
+
+
+
+
