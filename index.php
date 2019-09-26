@@ -33,11 +33,14 @@ $result = cardContainer($sets);
     <form action="index.php"  method="get">
         <p>Name:</p> <input type="text" name="name"><br>
         <p>Alignment: </p><input type="text" name="alignment"><br>
-        <p>Lightsaber Power (%):</p> <input type="text" name="alignment"><br>
-        <p>Force Power (%): </p> <input type="text" name="alignment"><br>
-        <p> Blaster Power (%):</p> <input type="text" name="alignment"><br>
+        <p>Lightsaber Power (%):</p> <input type="text" name="lightsaberPower"><br>
+        <p>Force Power (%): </p> <input type="text" name="forcePower"><br>
+        <p> Blaster Power (%):</p> <input type="text" name="blasterPower"><br>
+        <p> Upload Avatar Image:</p> <input type="text" name="uploadAvatar"><br>
 
-    <input type="submit" value="Submit">
+
+
+        <input type="submit" value="Submit">
     </form>
 
 </div>
