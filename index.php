@@ -18,7 +18,7 @@ $result = cardContainer($sets);
     </div>
 </section>
 <div class="boxes">
-    <form action="upload.php"  method=post>
+    <form action="upload.php?auth=true"  method=post>
         <p>Name:</p> <input type="text" max="20" name="name" required><br>
         <p>Alignment: </p><select name="alignment"><option value="Republic">Republic</option> <option value="Sith">Sith</option><br></select>
         <p>Lightsaber Power (%):</p> <input type="number" min="1" max="100" name="lightsaberPower" required><br>
