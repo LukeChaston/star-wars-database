@@ -4,6 +4,8 @@ $dbh = connectDB();
 $sets = pullSetNames($dbh);
 $result = cardContainer($sets);
 
+
+
  ?>
 
 
@@ -37,9 +39,6 @@ $result = cardContainer($sets);
         <p>Force Power (%): </p> <input type="text" name="forcePower"><br>
         <p> Blaster Power (%):</p> <input type="text" name="blasterPower"><br>
         <p> Upload Avatar Image:</p> <input type="text" name="uploadAvatar"><br>
-
-
-
         <input type="submit" value="Submit">
     </form>
 
