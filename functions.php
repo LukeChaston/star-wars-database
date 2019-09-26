@@ -45,9 +45,25 @@ function pullSetNames (PDO $dbh) : array {
 *
 * @param $values array of the user's input from formPage.php
 *
-* @param $connection array of current contents of DB we're inserting into
+* @param $connection array of current contents of DB we're inserting into.
+ *
+ * @param connectDb: Connects to data base.
+ *
+ * @param name : the name the user will input. Varchar type.
+ *
+ * @param alignment: the faction of the character. Boolean type
+ *
+ * @param forcePower: The character's force power. Int. Min 1 to max 100 in percentage.
+ *
+ * @param lighsaberPower: The character's lightsaber power. Int. Min 1 to max 100 in percentage.
+ *
+ * @param blasterPower: The character's blaster power. Int. Min 1 to max 100 in percentage.
+ *
+ * @param image: The character's avatar in jpg. Not working the way I want it to yet.
 *
 * @returns user-generated data to DB
+ *
+ *
 */
 function addDataToDb(PDO $connectDB, $name, $alignment, $forcePower, $lightsaberPower, $blasterPower, $image)
 {
