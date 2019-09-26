@@ -24,7 +24,7 @@ $result = cardContainer($sets);
         <p>Lightsaber Power (%):</p> <input type="number" min="1" max="100" name="lightsaberPower" required><br>
         <p>Force Power (%): </p> <input type="number" min="1" max="100"  name="forcePower" required><br>
         <p> Blaster Power (%):</p> <input type="number" min="1" max="100"  name="blasterPower" required><br>
-        <p> Upload Avatar Image:</p> <input type="text" name="image" required><br>
+        <p> Link to Avatar Image:</p> <input type="text" name="image" required><br>
         <input type="submit" value="Submit">
     </form>
 </div>
